@@ -44,7 +44,7 @@ jobs:
           file: ./Dockerfile
           builder: ${{ steps.buildx.outputs.name }}
           push: true
-          tags: lfulcrum/simplewhale:$RELEASE_VERSION
+          tags: lfulcrum/simplewhale:${{ env.RELEASE_VERSION }}
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache
 
